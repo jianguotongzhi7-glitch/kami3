@@ -62,13 +62,11 @@ var music_duration;
 
 
 function scrollit(){
-  i=i+1;
-  $('#txt'+i).fadeIn(4000);
-  if(i==6){
-    return;
-  }
-  else {
-    setTimeout("scrollit()",delay);
+  var $ftxt = $('.ftxt p');
+  if(i < $ftxt.length){
+    $ftxt.eq(i).fadeIn(4000);
+    i++;
+    setTimeout(scrollit, delay);
   }
 }
 
@@ -94,7 +92,14 @@ function load_music(a){
   $('#bginfo').html(bginfo[a]);
   player.src = songlist[a];
   player.load();
-  player.play();
+  // 尝试播放音乐，如果失败（浏览器自动播放策略），则等待用户交互
+  try {
+    player.play().catch(function(e) {
+      console.log('自动播放被阻止，等待用户交互', e);
+    });
+  } catch (e) {
+    console.log('播放音乐时出错', e);
+  }
 }
 
 function index_int(){
@@ -146,20 +151,23 @@ function index_int(){
   var ul = document.querySelector(".swiper-pagination");
   var Observer = new MutationObserver(function (mutations, instance) {
     mutations.forEach(function (mutation) {
-      mutation.target.childNodes.forEach(function(d){
-        var cname = d.className.toString();
-        if(cname.indexOf("active") > -1)
-        {
-          music_i = d.getAttribute("tid");
-          console.log(music_i);
-          load_music(d.getAttribute("tid"));
+      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+        var target = mutation.target;
+        if (target.classList.contains('swiper-pagination-bullet-active')) {
+          var tid = target.getAttribute("tid");
+          if (tid !== music_i) {
+            music_i = tid;
+            console.log(music_i);
+            load_music(tid);
+          }
         }
-      });
+      }
     });
   });
 
   Observer.observe(ul, {
-    attributes: true
+    attributes: true,
+    subtree: true
   });
   scrollit();
   load_music(0);
