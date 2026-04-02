@@ -1,20 +1,20 @@
-$('<img/>').attr('src', './kami/assets/images/background-1.jpg').on('load', function() {
+$('<img/>').attr('src', '/kami/assets/images/background-1.jpg').on('load', function() {
    $(this).remove();
    bgimgok();
 });
-$('<img/>').attr('src', './kami/assets/images/background-2.jpg').on('load', function() {
+$('<img/>').attr('src', '/kami/assets/images/background-2.jpg').on('load', function() {
    $(this).remove();
    bgimgok();
 });
-$('<img/>').attr('src', './kami/assets/images/background-7.jpg').on('load', function() {
+$('<img/>').attr('src', '/kami/assets/images/background-7.jpg').on('load', function() {
    $(this).remove();
    bgimgok();
 });
-$('<img/>').attr('src', './kami/assets/images/background-3.jpg').on('load', function() {
+$('<img/>').attr('src', '/kami/assets/images/background-3.jpg').on('load', function() {
    $(this).remove();
    bgimgok();
 });
-$('<img/>').attr('src', './kami/assets/images/background-4.jpg').on('load', function() {
+$('<img/>').attr('src', '/kami/assets/images/background-4.jpg').on('load', function() {
    $(this).remove();
    bgimgok();
 });
@@ -38,11 +38,11 @@ var player;
 var _prog;
 var music_i = 0;
 var songlist = [
-  "./kami/assets/file/1.mp3",
-  "./kami/assets/file/7.mp3",
-  "./kami/assets/file/2.mp3",
-  "./kami/assets/file/3.mp3",
-  "./kami/assets/file/4.mp3"
+  "/kami/assets/file/1.mp3",
+  "/kami/assets/file/7.mp3",
+  "/kami/assets/file/2.mp3",
+  "/kami/assets/file/3.mp3",
+  "/kami/assets/file/4.mp3"
 ];
 var songname = [
   "梶浦由記 - Never leave you alone",
