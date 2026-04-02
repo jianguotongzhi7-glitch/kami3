@@ -1,26 +1,29 @@
-$('<img/>').attr('src', './kami/assets/images/background-1.jpg').on('load', function() {
-   $(this).remove();
-   bgimgok();
-});
-$('<img/>').attr('src', './kami/assets/images/background-2.jpg').on('load', function() {
-   $(this).remove();
-   bgimgok();
-});
-$('<img/>').attr('src', './kami/assets/images/background-7.jpg').on('load', function() {
-   $(this).remove();
-   bgimgok();
-});
-$('<img/>').attr('src', './kami/assets/images/background-3.jpg').on('load', function() {
-   $(this).remove();
-   bgimgok();
-});
-$('<img/>').attr('src', './kami/assets/images/background-4.jpg').on('load', function() {
-   $(this).remove();
-   bgimgok();
-});
 // 创建一个图片加载完成的计数器
 var imgLoadCount = 0;
 var totalImgCount = 5;
+
+// 图片加载完成处理函数
+function handleImgLoad() {
+  $(this).remove();
+  imgLoadCount++;
+  bgimgok();
+}
+
+// 图片加载错误处理函数
+function handleImgError() {
+  console.log('图片加载失败:', this.src);
+  $(this).remove();
+  // 即使失败也继续计数，避免loading一直显示
+  imgLoadCount++;
+  bgimgok();
+}
+
+// 预加载所有背景图片
+$('<img/>').attr('src', './kami/assets/images/background-1.jpg').on('load', handleImgLoad).on('error', handleImgError);
+$('<img/>').attr('src', './kami/assets/images/background-2.jpg').on('load', handleImgLoad).on('error', handleImgError);
+$('<img/>').attr('src', './kami/assets/images/background-7.jpg').on('load', handleImgLoad).on('error', handleImgError);
+$('<img/>').attr('src', './kami/assets/images/background-3.jpg').on('load', handleImgLoad).on('error', handleImgError);
+$('<img/>').attr('src', './kami/assets/images/background-4.jpg').on('load', handleImgLoad).on('error', handleImgError);
 
 $("#inloading").show();
 var bgoknum = 0;
@@ -65,7 +68,6 @@ var bginfo = [
 ];
 var music_duration;
 
-
 function scrollit(){
   // 清除之前的定时器
   if (scrollTimer) {
@@ -85,20 +87,20 @@ function scrollit(){
 }
 
 function playMusic() {
-    if (player.paused){
+  if (player.paused){
         player.play();
     }else {
         player.pause();
     }
 }
 function set_music_progress(){
-    _prog = (Number(player.currentTime).toFixed(2) / music_duration * 100).toFixed(2);
-    $(".progress-bar").attr("aria-valuenow",_prog);
-    $(".progress-bar").css("width",_prog+"%");
+  _prog = (Number(player.currentTime).toFixed(2) / music_duration * 100).toFixed(2);
+  $(".progress-bar").attr("aria-valuenow",_prog);
+  $(".progress-bar").css("width",_prog+"%");
 }
 
 function change_music(){
-    $('.swiper-pagination span');
+  $('.swiper-pagination span');
 }
 
 function load_music(a){
@@ -188,7 +190,6 @@ function index_int(){
     $(b).attr("tid",i);
   });
 
-
   var ul = document.querySelector(".swiper-pagination");
   var isChangingMusic = false; // 添加标志位，防止重复加载音乐
   var lastChangeTime = 0; // 记录上次切换时间
@@ -222,7 +223,7 @@ function index_int(){
     attributes: true,
     subtree: true
   });
-  
+
   // 添加页面卸载时的清理函数
   window.addEventListener('beforeunload', function() {
     // 清除定时器
@@ -238,18 +239,7 @@ function index_int(){
       player.pause();
     }
   });
-  
+
   scrollit();
   load_music(0);
 }
-
-
-
-
-/*function git_login(){
-location.href = ;
-$.post("m.php?type=login",{page:num}, function(data) {
-  location.href = $url+$data;
-});
-}
-*/
