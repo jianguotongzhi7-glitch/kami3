@@ -1,6 +1,6 @@
 var itoken = localStorage.getItem("token");
-$("#header").load("/header.html");
-$("#footer").load("/footer.html");
+$("#header").load("./header.html");
+$("#footer").load("./footer.html");
 if(window.location.href == "https://kami.im/" || window.location.href.indexOf("index.html"))
 {
   $("#header").removeClass("header-dark");
