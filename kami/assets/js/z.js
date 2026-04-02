@@ -24,9 +24,27 @@ var totalImgCount = 5;
 
 $("#inloading").show();
 var bgoknum = 0;
+
+// 添加超时机制，确保loading能被隐藏
+setTimeout(function() {
+  if (bgoknum < 5) {
+    console.log('图片加载超时，强制隐藏loading');
+    bgoknum = 5;
+    $("#inloading").hide();
+    $(document).ready(function () {
+      index_int();
+    });
+  }
+}, 10000); // 10秒超时
+
 function bgimgok()
 {
   bgoknum++;
+  // 检查是否已经达到5，避免重复执行
+  if(bgoknum >= 5) {
+    return;
+  }
+  
   if(bgoknum == 5)
   {
     $("#inloading").hide();
