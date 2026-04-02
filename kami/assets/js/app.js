@@ -9,7 +9,7 @@ if(window.location.href == "https://kami.im/" || window.location.href.indexOf("i
 function getuserinfo(){
   var s0='<a href="/portal.html"><i class="icon-login"></i>Sign in</a>';
   var s1='<div class="row align-items-center"><div class="col-sm"><a href="me.html"><div class="avatar"></div><span class="name"></span></a></div></div>';
-  $.post("/m.php",{'token':itoken},function(data) {
+  $.post("./m.php",{'token':itoken},function(data) {
     data = JSON.parse(data);
     if(data.uid==0)
     {
@@ -40,7 +40,7 @@ function getuserinfo(){
   });
 }
 function getartlist(num){
-  $.post("get.php",{page:num}, function(data) {
+  $.post("./get.php",{page:num}, function(data) {
     data = $.parseJSON(data);
     $("#artlist").html(Base64.decode(data['artdata']));
     $(".pagination").html(Base64.decode(data['pagedata']));
@@ -176,6 +176,11 @@ function getartlist(num){
           options.slideToClickedSlide = true;
         }
 
+        // 销毁旧的Swiper实例（如果存在）
+        if (slider[0].swiper) {
+          slider[0].swiper.destroy(true, true);
+        }
+        
         new Swiper ( slider, options );
       });
 

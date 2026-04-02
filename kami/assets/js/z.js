@@ -88,17 +88,27 @@ function change_music(){
 }
 
 function load_music(a){
+  // 检查索引是否有效
+  if (a < 0 || a >= songlist.length) {
+    console.log('无效的音乐索引:', a);
+    return;
+  }
+  
   $('#music_name').html(songname[a]);
   $('#bginfo').html(bginfo[a]);
-  player.src = songlist[a];
-  player.load();
-  // 尝试播放音乐，如果失败（浏览器自动播放策略），则等待用户交互
-  try {
-    player.play().catch(function(e) {
-      console.log('自动播放被阻止，等待用户交互', e);
-    });
-  } catch (e) {
-    console.log('播放音乐时出错', e);
+  
+  // 只在音乐源不同时才加载
+  if (player.src !== songlist[a]) {
+    player.src = songlist[a];
+    player.load();
+    // 尝试播放音乐，如果失败（浏览器自动播放策略），则等待用户交互
+    try {
+      player.play().catch(function(e) {
+        console.log('自动播放被阻止，等待用户交互', e);
+      });
+    } catch (e) {
+      console.log('播放音乐时出错', e);
+    }
   }
 }
 
@@ -149,16 +159,22 @@ function index_int(){
 
 
   var ul = document.querySelector(".swiper-pagination");
+  var isChangingMusic = false; // 添加标志位，防止重复加载音乐
   var Observer = new MutationObserver(function (mutations, instance) {
     mutations.forEach(function (mutation) {
       if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
         var target = mutation.target;
         if (target.classList.contains('swiper-pagination-bullet-active')) {
           var tid = target.getAttribute("tid");
-          if (tid !== music_i) {
+          if (tid !== music_i && !isChangingMusic) {
+            isChangingMusic = true; // 设置标志位
             music_i = tid;
             console.log(music_i);
             load_music(tid);
+            // 延迟重置标志位，确保音乐加载完成
+            setTimeout(function() {
+              isChangingMusic = false;
+            }, 1000);
           }
         }
       }
