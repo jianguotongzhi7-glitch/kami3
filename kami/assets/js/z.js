@@ -94,18 +94,35 @@ function load_music(a){
     return;
   }
   
+  // 暂停当前播放的音乐
+  if (!player.paused) {
+    player.pause();
+  }
+  
   $('#music_name').html(songname[a]);
   $('#bginfo').html(bginfo[a]);
   
   // 只在音乐源不同时才加载
-  if (player.src !== songlist[a]) {
+  var currentSrc = player.src || "";
+  var newSrc = songlist[a] || "";
+  
+  // 比较完整路径，避免因相对路径差异导致重复加载
+  if (currentSrc.indexOf(newSrc) === -1 && newSrc.indexOf(currentSrc) === -1) {
     player.src = songlist[a];
     player.load();
     // 尝试播放音乐，如果失败（浏览器自动播放策略），则等待用户交互
     try {
-      player.play().catch(function(e) {
-        console.log('自动播放被阻止，等待用户交互', e);
-      });
+      var playPromise = player.play();
+      if (playPromise !== undefined) {
+        playPromise.then(function() {
+          console.log('音乐播放成功');
+        }).catch(function(e) {
+          // 只在非AbortError时记录日志
+          if (e.name !== 'AbortError') {
+            console.log('自动播放被阻止，等待用户交互', e);
+          }
+        });
+      }
     } catch (e) {
       console.log('播放音乐时出错', e);
     }
@@ -160,16 +177,22 @@ function index_int(){
 
   var ul = document.querySelector(".swiper-pagination");
   var isChangingMusic = false; // 添加标志位，防止重复加载音乐
+  var lastChangeTime = 0; // 记录上次切换时间
+  var minChangeInterval = 500; // 最小切换间隔（毫秒）
+  
   var Observer = new MutationObserver(function (mutations, instance) {
+    var now = Date.now();
     mutations.forEach(function (mutation) {
       if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
         var target = mutation.target;
         if (target.classList.contains('swiper-pagination-bullet-active')) {
           var tid = target.getAttribute("tid");
-          if (tid !== music_i && !isChangingMusic) {
+          // 检查时间间隔，防止短时间内重复触发
+          if (tid !== music_i && !isChangingMusic && (now - lastChangeTime) > minChangeInterval) {
             isChangingMusic = true; // 设置标志位
+            lastChangeTime = now; // 更新最后切换时间
             music_i = tid;
-            console.log(music_i);
+            console.log('切换到音乐:', music_i);
             load_music(tid);
             // 延迟重置标志位，确保音乐加载完成
             setTimeout(function() {
