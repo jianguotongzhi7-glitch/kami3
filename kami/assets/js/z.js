@@ -39,10 +39,10 @@ var _prog;
 var music_i = 0;
 var songlist = [
   "./kami/assets/file/1.mp3",
-  "/kami/assets/file/7.mp3",
-  "/kami/assets/file/2.mp3",
-  "/kami/assets/file/3.mp3",
-  "/kami/assets/file/4.mp3"
+  "./kami/assets/file/7.mp3",
+  "./kami/assets/file/2.mp3",
+  "./kami/assets/file/3.mp3",
+  "./kami/assets/file/4.mp3"
 ];
 var songname = [
   "梶浦由記 - Never leave you alone",
