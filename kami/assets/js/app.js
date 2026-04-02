@@ -1,16 +1,30 @@
 var itoken = localStorage.getItem("token");
-$("#header").load("./header.html");
-$("#footer").load("./footer.html");
+// 为load方法添加错误处理
+$("#header").load("./header.html", function(response, status, xhr) {
+  if (status == "error") {
+    console.log("header.html加载失败:", xhr.status, xhr.statusText);
+  }
+});
+$("#footer").load("./footer.html", function(response, status, xhr) {
+  if (status == "error") {
+    console.log("footer.html加载失败:", xhr.status, xhr.statusText);
+  }
+});
 if(window.location.href == "https://kami.im/" || window.location.href.indexOf("index.html"))
 {
   $("#header").removeClass("header-dark");
 }
 
 function getuserinfo(){
-  var s0='<a href="/portal.html"><i class="icon-login"></i>Sign in</a>';
-  var s1='<div class="row align-items-center"><div class="col-sm"><a href="me.html"><div class="avatar"></div><span class="name"></span></a></div></div>';
-  $.post("./m.php",{'token':itoken},function(data) {
-    data = JSON.parse(data);
+  var s0='<a href="./portal.html"><i class="icon-login"></i>Sign in</a>';
+  var s1='<div class="row align-items-center"><div class="col-sm"><a href="./me.html"><div class="avatar"></div><span class="name"></span></a></div></div>';
+  $.ajax({
+    url: "./m.php",
+    type: "POST",
+    data: {'token':itoken},
+    timeout: 10000, // 10秒超时
+    success: function(data) {
+      data = JSON.parse(data);
     if(data.uid==0)
     {
       $('.login').html(s0);
@@ -19,7 +33,7 @@ function getuserinfo(){
     }
     else {
       $('.login').html(s1);
-      $('.login .avatar').css("background-image","url(/getavatar.php?uid="+data.uid+")");
+      $('.login .avatar').css("background-image","url(./getavatar.php?uid="+data.uid+")");
       $('.login .name').html(data.user);
       if(data.newtoken !="")
       {
@@ -27,7 +41,7 @@ function getuserinfo(){
       }
       if(window.location.href.indexOf("portal.html"))
       {
-        $('.vh-md-100').html('<div class="col isloginon"><h5>hello, <b>'+data.user+'</b> are you OK? <a href="/login.php?type=loginout">login out?</a></h5></div>');
+        $('.vh-md-100').html('<div class="col isloginon"><h5>hello, <b>'+data.user+'</b> are you OK? <a href="./login.php?type=loginout">login out?</a></h5></div>');
       }
     }
     if(data.hmnum !="0")
@@ -37,13 +51,32 @@ function getuserinfo(){
     else {
       $('.soul').html("today No Soul Point");
     }
+    },
+    error: function(xhr, status, error) {
+      console.log("获取用户信息失败:", xhr.status, error);
+    },
+    complete: function() {
+      console.log("获取用户信息请求完成");
+    }
   });
 }
 function getartlist(num){
-  $.post("./get.php",{page:num}, function(data) {
-    data = $.parseJSON(data);
+  $.ajax({
+    url: "./get.php",
+    type: "POST",
+    data: {page:num},
+    timeout: 10000, // 10秒超时
+    success: function(data) {
+      data = $.parseJSON(data);
     $("#artlist").html(Base64.decode(data['artdata']));
     $(".pagination").html(Base64.decode(data['pagedata']));
+    },
+    error: function(xhr, status, error) {
+      console.log("获取文章列表失败:", xhr.status, error);
+    },
+    complete: function() {
+      console.log("获取文章列表请求完成");
+    }
   });
 }
 

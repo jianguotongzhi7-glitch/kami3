@@ -202,8 +202,8 @@ function index_int(){
     $("#music_btn_play").addClass("icon-pause-circle");
     $("#music_btn_play").removeClass("icon-play-circle");
   });
-  $('.swiper-pagination-bullet').each(function(i,b){
-    $(b).attr("tid",i);
+  $('.swiper-pagination-bullet').each(function(index, element){
+    $(element).attr("tid", index);
   });
 
 
@@ -219,6 +219,13 @@ function index_int(){
         var target = mutation.target;
         if (target.classList.contains('swiper-pagination-bullet-active')) {
           var tid = target.getAttribute("tid");
+          // 将tid转换为数字
+          tid = parseInt(tid, 10);
+          // 检查tid是否有效
+          if (isNaN(tid) || tid < 0 || tid >= songlist.length) {
+            console.log('无效的tid值:', tid);
+            return;
+          }
           // 检查时间间隔，防止短时间内重复触发
           if (tid !== music_i && !isChangingMusic && (now - lastChangeTime) > minChangeInterval) {
             isChangingMusic = true; // 设置标志位
