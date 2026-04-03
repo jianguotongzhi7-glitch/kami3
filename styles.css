@@ -10,6 +10,10 @@ body {
     background-color: #000;
     color: #fff;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
 }
 
 /* Loading */
@@ -330,6 +334,113 @@ body {
 .pagination-dots .dot.active {
     background: #ff69b4;
     transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Swiper */
+    .swiper {
+        height: 100vh;
+        height: 100dvh;
+    }
+    
+    /* Slide Content */
+    .slide-content {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .text-container h3 {
+        font-size: 1.5rem;
+    }
+    
+    .text-container .quote {
+        font-size: 1.2rem;
+        padding: 15px 0 15px 20px;
+    }
+    
+    /* Music Player */
+    .music-player {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .play-btn {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    .play-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .progress-container {
+        max-width: 200px;
+    }
+    
+    .progress-bar {
+        height: 5px;
+    }
+    
+    /* Pagination Dots */
+    .pagination-dots {
+        gap: 12px;
+    }
+    
+    .pagination-dots .dot {
+        width: 14px;
+        height: 14px;
+        min-width: 14px;
+        min-height: 14px;
+    }
+    
+    /* Header */
+    #header {
+        padding: 10px 0;
+    }
+    
+    .logo-circle {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-container h3 {
+        font-size: 1.2rem;
+    }
+    
+    .text-container .quote {
+        font-size: 1rem;
+    }
+    
+    .play-btn {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        min-height: 48px;
+    }
+    
+    .play-btn svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .progress-container {
+        max-width: 180px;
+    }
+    
+    .pagination-dots .dot {
+        width: 16px;
+        height: 16px;
+        min-width: 16px;
+        min-height: 16px;
+    }
 }
 
 /* Swiper Navigation */
