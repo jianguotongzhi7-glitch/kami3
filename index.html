@@ -18,787 +18,22 @@
     <link rel="stylesheet" href="./kami/assets/css/style.css">
     <link rel="stylesheet" href="./kami/assets/css/z.css">
     <title>God is Madoka - kaname madoka かなめ まどか 鹿目圆香 魔法少女まどか☆マギカ</title>
-  <style data-id="immersive-translate-input-injected-css">.immersive-translate-input {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 2147483647;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.immersive-translate-loading-spinner {
-  vertical-align: middle !important;
-  width: 10px !important;
-  height: 10px !important;
-  display: inline-block !important;
-  margin: 0 4px !important;
-  border: 2px rgba(221, 244, 255, 0.6) solid !important;
-  border-top: 2px rgba(0, 0, 0, 0.375) solid !important;
-  border-left: 2px rgba(0, 0, 0, 0.375) solid !important;
-  border-radius: 50% !important;
-  padding: 0 !important;
-  -webkit-animation: immersive-translate-loading-animation 0.6s infinite linear !important;
-  animation: immersive-translate-loading-animation 0.6s infinite linear !important;
-}
-
-@-webkit-keyframes immersive-translate-loading-animation {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(359deg);
-  }
-}
-
-@keyframes immersive-translate-loading-animation {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(359deg);
-  }
-}
-
-
-.immersive-translate-input-loading {
-  --loading-color: #f78fb6;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  display: block;
-  margin: 12px auto;
-  position: relative;
-  color: white;
-  left: -100px;
-  box-sizing: border-box;
-  animation: immersiveTranslateShadowRolling 1.5s linear infinite;
-}
-
-@keyframes immersiveTranslateShadowRolling {
-  0% {
-    box-shadow: 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
-  }
-
-  12% {
-    box-shadow: 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
-  }
-
-  25% {
-    box-shadow: 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0), 0px 0 rgba(255, 255, 255, 0);
-  }
-
-  36% {
-    box-shadow: 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color), 0px 0 rgba(255, 255, 255, 0);
-  }
-
-  50% {
-    box-shadow: 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color), 100px 0 var(--loading-color);
-  }
-
-  62% {
-    box-shadow: 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color), 110px 0 var(--loading-color);
-  }
-
-  75% {
-    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color), 120px 0 var(--loading-color);
-  }
-
-  87% {
-    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 130px 0 var(--loading-color);
-  }
-
-  100% {
-    box-shadow: 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0), 200px 0 rgba(255, 255, 255, 0);
-  }
-}
-
-
-.immersive-translate-search-recomend {
-  border: 1px solid #dadce0;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 16px;
-  position: relative;
-  font-size: 16px;
-}
-
-.immersive-translate-search-enhancement-en-title {
-  color: #4d5156;
-}
-
-/* dark */
-@media (prefers-color-scheme: dark) {
-  .immersive-translate-search-recomend {
-    border: 1px solid #3c4043;
-  }
-
-  .immersive-translate-close-action svg {
-    fill: #bdc1c6;
-  }
-
-  .immersive-translate-search-enhancement-en-title {
-    color: #bdc1c6;
-  }
-}
-
-
-.immersive-translate-search-settings {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  cursor: pointer;
-}
-
-.immersive-translate-search-recomend::before {
-  /* content: " "; */
-  /* width: 20px; */
-  /* height: 20px; */
-  /* top: 16px; */
-  /* position: absolute; */
-  /* background: center / contain url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAxlBMVEUAAADpTInqTIjpSofnSIfqS4nfS4XqS4nqTIjsTYnrTInqTIroS4jvQIDqTIn////+/v7rSYjpTIn8/v7uaZzrTIr9/f3wfansWJL88/b85e73qc39+/v3xNnylrvrVI/98fb62Obva5/8+fr76vH4y9zpSIj74e353Oj1ocTzm77xhK/veKbtYpjsXJTqU47oTInxjrXyh7L99fj40eH2ttH1udD3sc31ssz1rMnykLXucqPtbqD85e/1xdn2u9DzqcXrUY6FaJb8AAAADnRSTlMA34BgIM8Q37/fz7+/EGOHcVQAAAGhSURBVDjLhZPncuowEEZFTW7bXVU7xsYYTO/p7bb3f6lICIOYJOT4h7/VnFmvrBFjrF3/CR/SajBHswafctG0Qg3O8O0Xa8BZ6uw7eLjqr30SofCDVSkemMinfL1ecy20r5ygR5zz3ArcAqJExPTPKhDENEmS30Q9+yo4lEQkqVTiIEAHCT10xWERRdH0Bq0aCOPZNDV3s0xaYce1lHEoDHU8wEh3qRJypNcTAeKUIjgKMeGLDoRCLVLTVf+Ownj8Kk6H9HM6QXPgYjQSB0F00EJEu10ILQrs/QeP77BSSr0MzLOyuJJQbnUoOOIUI/A8EeJk9E4YUHUWiRyTVKGgQUB8/3e/NpdGlfI+FMQyWsCBWyz4A/ZyHXyiiz0Ne5aGZssoxRmcChw8/EFKQ5JwwkUo3FRT5yXS7q+Y/rHDZmFktzpGMvO+5QofA4FPpEmGw+EWRCFvnaof7Zhe8NuYSLR0xErKLThUSs8gnODh87ssy6438yzbLzxl012HS19vfCf3CNhnbWOL1eEsDda+gDPUvri8tSZzNFrwIZf1NmNvqC1I/t8j7nYAAAAASUVORK5CYII='); */
-}
-
-.immersive-translate-search-title {}
-
-.immersive-translate-search-title-wrapper {}
-
-.immersive-translate-search-time {
-  font-size: 12px;
-  margin: 4px 0 24px;
-  color: #70757a;
-}
-
-.immersive-translate-expand-items {
-  display: none;
-}
-
-.immersive-translate-search-more {
-  margin-top: 16px;
-  font-size: 14px;
-}
-
-.immersive-translate-modal {
-  display: none;
-  position: fixed;
-  z-index: 2147483647;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
-  font-size: 15px;
-}
-
-.immersive-translate-modal-content {
-  background-color: #fefefe;
-  margin: 10% auto;
-  padding: 40px 24px 24px;
-  border: 1px solid #888;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 270px;
-  font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
-    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-  position: relative
-}
-
-.immersive-translate-modal .immersive-translate-modal-content-in-input {
-  max-width: 500px;
-}
-.immersive-translate-modal-content-in-input .immersive-translate-modal-body {
-  text-align: left;
-  max-height: unset;
-}
-
-.immersive-translate-modal-title {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 700;
-  color: #333333;
-}
-
-.immersive-translate-modal-body {
-  text-align: center;
-  font-size: 14px;
-  font-weight: 400;
-  color: #333333;
-  word-break: break-all;
-  margin-top: 24px;
-}
-
-@media screen and (max-width: 768px) {
-  .immersive-translate-modal-body {
-    max-height: 250px;
-    overflow-y: auto;
-  }
-}
-
-.immersive-translate-close {
-  color: #666666;
-  position: absolute;
-  right: 16px;
-  top: 16px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.immersive-translate-close:hover,
-.immersive-translate-close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.immersive-translate-modal-footer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 24px;
-}
-
-.immersive-translate-btn {
-  width: fit-content;
-  color: #fff;
-  background-color: #ea4c89;
-  border: none;
-  font-size: 16px;
-  margin: 0 8px;
-  padding: 9px 30px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.immersive-translate-btn:hover {
-  background-color: #f082ac;
-}
-
-.immersive-translate-cancel-btn {
-  /* gray color */
-  background-color: rgb(89, 107, 120);
-}
-
-
-.immersive-translate-cancel-btn:hover {
-  background-color: hsl(205, 20%, 32%);
-}
-
-.immersive-translate-action-btn {
-  background-color: transparent;
-  color: #EA4C89;
-  border: 1px solid #EA4C89
-}
-
-.immersive-translate-btn svg {
-  margin-right: 5px;
-}
-
-.immersive-translate-link {
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-drag: none;
-  text-decoration: none;
-  color: #007bff;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
-}
-
-.immersive-translate-primary-link {
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-drag: none;
-  text-decoration: none;
-  color: #ea4c89;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, .1);
-}
-
-.immersive-translate-modal input[type="radio"] {
-  margin: 0 6px;
-  cursor: pointer;
-}
-
-.immersive-translate-modal label {
-  cursor: pointer;
-}
-
-.immersive-translate-close-action {
-  position: absolute;
-  top: 2px;
-  right: 0px;
-  cursor: pointer;
-}</style><style data-id="immersive-translate-default-injected-css">:root {
-  --immersive-translate-theme-underline-borderColor: #72ece9;
-  --immersive-translate-theme-nativeUnderline-borderColor: #72ece9;
-  --immersive-translate-theme-nativeDashed-borderColor: #72ece9;
-  --immersive-translate-theme-nativeDotted-borderColor: #72ece9;
-  --immersive-translate-theme-highlight-backgroundColor: #ffff00;
-  --immersive-translate-theme-dashed-borderColor: #59c1bd;
-  --immersive-translate-theme-blockquote-borderColor: #cc3355;
-  --immersive-translate-theme-thinDashed-borderColor: #ff374f;
-  --immersive-translate-theme-dashedBorder-borderColor: #94a3b8;
-  --immersive-translate-theme-dashedBorder-borderRadius: 0;
-  --immersive-translate-theme-solidBorder-borderColor: #94a3b8;
-  --immersive-translate-theme-solidBorder-borderRadius: 0;
-  --immersive-translate-theme-dotted-borderColor: #94a3b8;
-  --immersive-translate-theme-wavy-borderColor: #72ece9;
-  --immersive-translate-theme-dividingLine-borderColor: #94a3b8;
-  --immersive-translate-theme-grey-textColor: #2f4f4f;
-  --immersive-translate-theme-marker-backgroundColor: #fbda41;
-  --immersive-translate-theme-marker-backgroundColor-rgb: 251, 218, 65;
-  --immersive-translate-theme-marker2-backgroundColor: #ffff00;
-  --immersive-translate-theme-opacity-opacity: 10;
-}
-
-.immersive-translate-target-translation-pre-whitespace {
-  white-space: pre-wrap !important;
-}
-
-.immersive-translate-pdf-target-container {
-  position: absolute;
-  background-color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    sans-serif;
-  top: 0;
-  width: 600px;
-  height: 100%;
-  z-index: 2;
-  line-height: 1.3;
-  font-size: 16px;
-}
-
-.immersive-translate-pdf-target-container .immersive-translate-target-wrapper {
-  color: rgb(0, 0, 0);
-  white-space: normal;
-  position: absolute;
-}
-
-.immersive-translate-pdf-target-container .immersive-translate-target-wrapper font {
-  color: inherit;
-  white-space: inherit;
-  position: unset;
-}
-
-.immersive-translate-state-dual>br {
-  display: none;
-}
-
-.immersive-translate-target-translation-block-wrapper {
-  margin: 8px 0 !important;
-  display: inline-block;
-}
-
-.immersive-translate-target-translation-pdf-block-wrapper {
-  margin: 0 !important;
-  display: block;
-}
-
-.immersive-translate-target-translation-theme-grey-inner {
-  color: var(--immersive-translate-theme-grey-textColor);
-}
-
-
-.immersive-translate-target-translation-theme-underline-inner {
-  border-bottom: 1px solid var(--immersive-translate-theme-underline-borderColor) !important;
-}
-
-.immersive-translate-target-translation-theme-nativeUnderline-inner {
-  text-decoration: underline !important;
-  text-decoration-color: var(--immersive-translate-theme-nativeUnderline-borderColor) !important;
-}
-
-.immersive-translate-target-translation-block-wrapper-theme-dashedBorder {
-  border: 1px dashed var(--immersive-translate-theme-dashedBorder-borderColor) !important;
-  border-radius: var(--immersive-translate-theme-dashedBorder-borderRadius) !important;
-  padding: 6px;
-  margin-top: 2px;
-  display: block;
-}
-
-.immersive-translate-target-translation-inline-wrapper-theme-dashedBorder {
-  border: 1px dashed var(--immersive-translate-theme-dashedBorder-borderColor) !important;
-  border-radius: var(--immersive-translate-theme-dashedBorder-borderRadius) !important;
-  padding: 2px;
-}
-
-.immersive-translate-target-translation-block-wrapper-theme-solidBorder {
-  border: 1px solid var(--immersive-translate-theme-solidBorder-borderColor) !important;
-  border-radius: var(--immersive-translate-theme-solidBorder-borderRadius) !important;
-  padding: 6px;
-  margin-top: 2px;
-  display: block;
-}
-
-.immersive-translate-target-translation-inline-wrapper-theme-solidBorder {
-  border: 1px solid var(--immersive-translate-theme-solidBorder-borderColor) !important;
-  border-radius: var(--immersive-translate-theme-solidBorder-borderRadius) !important;
-  padding: 2px;
-}
-
-.immersive-translate-target-translation-theme-nativeDashed-inner {
-  text-decoration: underline !important;
-  text-decoration-color: var(--immersive-translate-theme-nativeDashed-borderColor) !important;
-  text-decoration-style: dashed !important;
-}
-
-.immersive-translate-target-translation-theme-thinDashed-inner {
-  border-bottom: 1px dashed var(--immersive-translate-theme-thinDashed-borderColor) !important;
-}
-
-.immersive-translate-target-translation-theme-dotted-inner {
-  background-image: linear-gradient(to right,
-      var(--immersive-translate-theme-dotted-borderColor) 30%,
-      rgba(255, 255, 255, 0) 0%);
-  background-position: bottom;
-  background-size: 5px 1px;
-  background-repeat: repeat-x;
-  padding-bottom: 3px;
-}
-
-.immersive-translate-target-translation-theme-nativeDotted-inner {
-  text-decoration: underline !important;
-  text-decoration-color: var(--immersive-translate-theme-nativeDotted-borderColor) !important;
-  text-decoration-style: dotted !important;
-}
-
-.immersive-translate-target-translation-theme-wavy-inner {
-  text-decoration: underline !important;
-  text-decoration-color: var(--immersive-translate-theme-wavy-borderColor) !important;
-  text-decoration-style: wavy !important;
-}
-
-.immersive-translate-target-translation-theme-dashed-inner {
-  background: linear-gradient(to right,
-      var(--immersive-translate-theme-dashed-borderColor) 0%,
-      var(--immersive-translate-theme-dashed-borderColor) 50%,
-      transparent 50%,
-      transparent 100%) repeat-x left bottom;
-  background-size: 8px 2px;
-  padding-bottom: 2px;
-}
-
-.immersive-translate-target-translation-block-wrapper-theme-dividingLine::before {
-  content: "";
-  display: block;
-  max-width: 80px;
-  width: 10%;
-  border-top: 1px dashed var(--immersive-translate-theme-dividingLine-borderColor);
-  padding-top: 8px;
-}
-
-.immersive-translate-target-translation-inline-wrapper-theme-dividingLine::before {
-  content: "";
-  border-left: 1px dashed var(--immersive-translate-theme-dividingLine-borderColor);
-  max-height: 16px;
-  height: 16px;
-  padding-left: 8px;
-}
-
-.immersive-translate-target-translation-theme-highlight-inner {
-  background: var(--immersive-translate-theme-highlight-backgroundColor);
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-}
-
-.immersive-translate-target-translation-block-wrapper-theme-marker {
-  line-height: 1.5em;
-}
-
-.immersive-translate-target-translation-theme-marker2-inner {
-  font-weight: bold;
-  text-shadow: 10px 0px 3px var(--immersive-translate-theme-marker2-backgroundColor),
-    16px 3px 9px var(--immersive-translate-theme-marker2-backgroundColor),
-    2px 0px 6px var(--immersive-translate-theme-marker2-backgroundColor),
-    -12px 0px 12px var(--immersive-translate-theme-marker2-backgroundColor) !important;
-}
-
-.immersive-translate-target-translation-theme-marker-inner {
-  /* TODO: add more texture */
-  background: linear-gradient(to right,
-      rgba(var(--immersive-translate-theme-marker-backgroundColor-rgb), 0.1),
-      rgba(var(--immersive-translate-theme-marker-backgroundColor-rgb), 0.9) 3%,
-      rgba(var(--immersive-translate-theme-marker-backgroundColor-rgb), 0.9) 35%,
-      rgba(var(--immersive-translate-theme-marker-backgroundColor-rgb), 0.9) 70%,
-      rgba(var(--immersive-translate-theme-marker-backgroundColor-rgb), 0.8) 95%,
-      rgba(var(--immersive-translate-theme-marker-backgroundColor-rgb), 0.3));
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-}
-
-.immersive-translate-target-translation-theme-weakening {
-  opacity: 0.618 !important;
-}
-
-.immersive-translate-target-translation-theme-italic {
-  font-style: italic !important;
-}
-
-.immersive-translate-target-translation-theme-bold {
-  font-weight: bold !important;
-}
-
-.immersive-translate-target-translation-block-wrapper-theme-paper {
-  margin: 8px 0;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  padding: 16px 32px;
-  display: block;
-}
-
-.immersive-translate-target-translation-block-wrapper-theme-blockquote {
-  border-left: 4px solid var(--immersive-translate-theme-blockquote-borderColor) !important;
-  padding-left: 12px !important;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  display: block;
-}
-
-.immersive-translate-target-translation-theme-mask-inner {
-  filter: blur(5px) !important;
-  transition: filter 0.3s ease !important;
-  border-radius: 10px;
-  display: inline-block;
-}
-
-[data-immersive-translate-root-translation-theme="none"] .immersive-translate-target-translation-theme-mask-inner {
-  filter: none !important;
-}
-
-[data-immersive-translate-root-translation-theme="mask"] .immersive-translate-target-inner {
-  filter: blur(5px) !important;
-  transition: filter 0.3s ease !important;
-  border-radius: 10px;
-  display: inline-block;
-}
-
-
-/* opacity theme start */
-
-.immersive-translate-target-translation-theme-opacity-inner {
-  filter: opacity(calc(var(--immersive-translate-theme-opacity-opacity) * 1%)) !important;
-  transition: filter 0.3s ease !important;
-  border-radius: 10px;
-  display: inline-block;
-}
-
-[data-immersive-translate-root-translation-theme="none"] .immersive-translate-target-translation-theme-opacity-inner {
-  filter: none !important;
-}
-[data-immersive-translate-root-translation-theme="opacity"] .immersive-translate-target-inner,.immersive-translate-target-translation-theme-opacity-inner:hover {
-  filter: opacity(calc(var(--immersive-translate-theme-opacity-opacity) * 1%)) !important;
-  transition: filter 0.3s ease !important;
-  border-radius: 10px;
-  display: inline-block;
-}
-
-.immersive-translate-target-translation-theme-opacity-inner:hover {
-  filter: none !important;
-}
-
-
-.immersive-translate-target-translation-theme-mask-inner:hover {
-  filter: none !important;
-}
-[data-immersive-translate-root-translation-theme="opacity"] .immersive-translate-target-inner:hover {
-  filter: none !important;
-}
-
-
-[data-immersive-translate-root-translation-theme="mask"] .immersive-translate-target-inner:hover {
-  filter: none !important;
-}
-
-/* opacity theme end */
-
-/* vertical css , please remain it in the last one. */
-.immersive-translate-target-translation-vertical-block-wrapper {
-  margin: 0px 8px !important;
-}
-
-.immersive-translate-text {
-  font-size: 15px !important;
-}
-
-.immersive-translate-error-toast {
-  position: fixed;
-  top: 5%;
-  z-index: 99999999;
-  left: 0;
-  right: 0;
-  margin: auto;
-  max-width: 300px;
-  padding: 16px;
-  border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-@media all and (min-width: 750px) {
-  .immersive-translate-error-toast {
-    max-width: 400px;
-  }
-}
-
-
-.immersive-translate-clickable-button {
-  cursor: pointer;
-}
-
-.immersive-translate-help-button {
-  cursor: pointer;
-}
-
-.immersive-translate-loading-text:before {
-  content: "...";
-}
-
-
-/* dark mode for loading */
-
-@media only screen and (prefers-color-scheme: dark) {
-  .immersive-translate-loading {
-    border: 2px rgba(255, 255, 255, 0.25) solid !important;
-    border-top: 2px rgba(255, 255, 255, 1) solid !important;
-  }
-}
-
-.immersive-translate-error-wrapper {
-  position: relative;
-  display: inline-flex;
-  padding: 6px;
-  margin: 0 12px;
-  white-space: nowrap;
-  font-size: 0.9em;
-}
-[lang="zh-CN"] .immersive-translate-error-wrapper {
-  font-size: 0.75em;
-}
-[lang="zh-TW"] .immersive-translate-error-wrapper {
-  font-size: 0.75em;
-}
-
-
-.immersive-translate-tooltip {
-  position: relative;
-  display: inline-flex;
-  /* little indicater to indicate it's hoverable */
-}
-
-.immersive-translate-tooltip-content {
-  /* here's the magic */
-  position: absolute;
-  z-index: 100000000000;
-
-  left: 50%;
-  bottom: 0;
-  transform: translate(-50%, 110%);
-  line-height: 1;
-  /* and add a small left margin */
-
-  /* basic styles */
-  width: max-content;
-  max-width: 250px;
-  word-wrap: break-word;
-  white-space: pre-line;
-  padding: 10px;
-  border-radius: 10px;
-  background: #000C;
-  color: #fff;
-  text-align: center;
-  font-size: 14px;
-  display: none;
-  /* hide by default */
-}
-
-.immersive-translate-tooltip:hover .immersive-translate-tooltip-content {
-  display: block;
-}
-
-.immersive-translate-tooltip:hover+.immersive-translate-tooltip-content {
-  display: block;
-}
-
-.immersive-translate-tooltip-content-table {
-  left: unset !important;
-  bottom: unset !important;
-  transform: translate(-10%, 50%) !important;
-}
-
-
-.immersive-translate-tooltip:hover:before {
-  display: block;
-}
-
-
-
-.immersive-translate-loading-spinner {
-  vertical-align: middle !important;
-  width: 10px !important;
-  height: 10px !important;
-  display: inline-block !important;
-  margin: 0 4px !important;
-  border: 2px rgba(221, 244, 255, 0.6) solid !important;
-  border-top: 2px rgba(0, 0, 0, 0.375) solid !important;
-  border-left: 2px rgba(0, 0, 0, 0.375) solid !important;
-  border-radius: 50% !important;
-  padding: 0 !important;
-  -webkit-animation: immersive-translate-loading-animation 0.6s infinite linear !important;
-  animation: immersive-translate-loading-animation 0.6s infinite linear !important;
-}
-
-@-webkit-keyframes immersive-translate-loading-animation {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(359deg);
-  }
-}
-
-@keyframes immersive-translate-loading-animation {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(359deg);
-  }
-}
-</style><style data-id="immersive-translate-user-custom-style">:root {
-
-.immersive-translate-target-inner { font-family: inherit; }
-}
-</style><style data-id="immersive-translate-dynamic-injected-css">
-</style></head>
-  <body class="headroom headroom--top headroom--bottom" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-    <div id="inloading" style="display: none;" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
+  </head>
+  <body class="headroom headroom--top headroom--bottom" >
+    <div id="inloading" style="display: none;" >
       <div class="loading">loading...</div>
     </div>
     <!-- header -->
-    <header id="header" class="header header-sticky" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"><div class="container" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-  <div class="row" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-    <nav class="navbar navbar-expand-lg navbar-dark" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-      <div class="navbar-brand order-1 order-lg-1" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-        <a href="https://kami.im/" id="logolink" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-        <div class="logo" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-          <div class="lo1" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-            <div class="lo2" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-              <div class="lo3" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-                <div class="lo4" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
+    <header id="header" class="header header-sticky" ><div class="container" >
+  <div class="row" >
+    <nav class="navbar navbar-expand-lg navbar-dark" >
+      <div class="navbar-brand order-1 order-lg-1" >
+        <a href="https://kami.im/" id="logolink" >
+        <div class="logo" >
+          <div class="lo1" >
+            <div class="lo2" >
+              <div class="lo3" >
+                <div class="lo4" >
                 </div>
               </div>
             </div>
@@ -809,7 +44,7 @@
       <!--<button class="navbar-toggler order-1 order-lg-1" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>-->
-      <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarMenu" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
+      <div class="collapse navbar-collapse order-3 order-lg-1" id="navbarMenu" >
         <!--<ul class="navbar-nav mr-auto">
           <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
           <li class="nav-item">
@@ -817,149 +52,149 @@
           </li>
         </ul>-->
       </div>
-      <div class="order-2 order-lg-2 login" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
+      <div class="order-2 order-lg-2 login" >
       </div>
     </nav>
   </div>
 </div>
 </header>
     <!-- hero -->
-    <div class="praed" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
+    <div class="praed" >
     </div>
-    <div class="swiper-container swiper-container-fade swiper-container-initialized swiper-container-horizontal" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-      <div class="swiper-wrapper" style="transition-duration: 0ms;" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="4" style="width: 1920px; transition-duration: 0ms; opacity: 1; transform: translate3d(0px, 0px, 0px);" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-          <div class="image image-overlay image-zoom" style="background-image:url(./kami/assets/images/background-4.jpg)" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></div>
-          <div class="container" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-            <div class="row align-items-end align-items-center vh-100" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-              <div class="col-lg-8 text-white" data-swiper-parallax-x="-100%" style="transition-duration: 0ms; transform: translate3d(-100%, 0px, 0px);" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-                <h4 class="mb-2 font-weight-light" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">如果有人告诉我</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">怀有希望是一件错误的事情</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">我将无论多少次都会出言反驳</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">不管何时我都能这样坚持。</p>
+    <div class="swiper-container swiper-container-fade swiper-container-initialized swiper-container-horizontal" >
+      <div class="swiper-wrapper" style="transition-duration: 0ms;" ><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="4" style="width: 1920px; transition-duration: 0ms; opacity: 1; transform: translate3d(0px, 0px, 0px);" >
+          <div class="image image-overlay image-zoom" style="background-image:url(./kami/assets/images/background-4.jpg)" ></div>
+          <div class="container" >
+            <div class="row align-items-end align-items-center vh-100" >
+              <div class="col-lg-8 text-white" data-swiper-parallax-x="-100%" style="transition-duration: 0ms; transform: translate3d(-100%, 0px, 0px);" >
+                <h4 class="mb-2 font-weight-light" >
+                  <p >如果有人告诉我</p>
+                  <p >怀有希望是一件错误的事情</p>
+                  <p >我将无论多少次都会出言反驳</p>
+                  <p >不管何时我都能这样坚持。</p>
                 </h4>
               </div>
             </div>
           </div>
         </div>
-        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 1920px; transition-duration: 0ms; opacity: 1; transform: translate3d(-1920px, 0px, 0px);" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-          <div class="image image-overlay image-zoom" style="background-image:url(./kami/assets/images/background-1.jpg)" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></div>
-          <div class="container" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-            <div class="row align-items-center vh-100" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-              <div class="col-lg-8 text-white" data-swiper-parallax-x="-100%" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px);" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-                <h3 class="mt-1 mb-3 font-weight-light ftxt" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-                  <p id="txt1" style="display: block;" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">Darkness cannot drive out darkness</p>
-                  <p id="txt2" style="display: block;" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">only light can do that</p>
-                  <p id="txt3" style="display: block;" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">Hate cannot drive out hate</p>
-                  <p id="txt4" style="display: block;" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">only love can do that.</p>
-                  <p id="txt5" style="display: block;" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"><b data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">Your sin , I bear</b></p>
+        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 1920px; transition-duration: 0ms; opacity: 1; transform: translate3d(-1920px, 0px, 0px);" >
+          <div class="image image-overlay image-zoom" style="background-image:url(./kami/assets/images/background-1.jpg)" ></div>
+          <div class="container" >
+            <div class="row align-items-center vh-100" >
+              <div class="col-lg-8 text-white" data-swiper-parallax-x="-100%" style="transition-duration: 0ms; transform: translate3d(0%, 0px, 0px);" >
+                <h3 class="mt-1 mb-3 font-weight-light ftxt" >
+                  <p id="txt1" style="display: block;"  data-immersive-translate-paragraph="1">Darkness cannot drive out darkness</p>
+                  <p id="txt2" style="display: block;"  data-immersive-translate-paragraph="1">only light can do that</p>
+                  <p id="txt3" style="display: block;"  data-immersive-translate-paragraph="1">Hate cannot drive out hate</p>
+                  <p id="txt4" style="display: block;"  data-immersive-translate-paragraph="1">only love can do that.</p>
+                  <p id="txt5" style="display: block;" ><b  data-immersive-translate-paragraph="1">Your sin , I bear</b></p>
                 </h3>
               </div>
             </div>
           </div>
         </div>
-        <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 1920px; transition-duration: 0ms; opacity: 0; transform: translate3d(-3840px, 0px, 0px);" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-          <div class="image image-overlay image-zoom" style="background-image:url(./kami/assets/images/background-7.jpg)" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></div>
-          <div class="container" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-            <div class="row align-items-end align-items-center vh-100" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-              <div class="col-lg-8 text-white" data-swiper-parallax-x="-100%" style="transition-duration: 0ms; transform: translate3d(100%, 0px, 0px);" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-                <h3 class="mb-2 font-weight-light" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">奇跡も</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">魔法も</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">あるんだよ</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"><b data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">後悔なんて、あるわけない</b></p>
+        <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 1920px; transition-duration: 0ms; opacity: 0; transform: translate3d(-3840px, 0px, 0px);" >
+          <div class="image image-overlay image-zoom" style="background-image:url(./kami/assets/images/background-7.jpg)" ></div>
+          <div class="container" >
+            <div class="row align-items-end align-items-center vh-100" >
+              <div class="col-lg-8 text-white" data-swiper-parallax-x="-100%" style="transition-duration: 0ms; transform: translate3d(100%, 0px, 0px);" >
+                <h3 class="mb-2 font-weight-light" >
+                  <p  data-immersive-translate-paragraph="1">奇跡も</p>
+                  <p  data-immersive-translate-paragraph="1">魔法も</p>
+                  <p  data-immersive-translate-paragraph="1">あるんだよ</p>
+                  <p ><b  data-immersive-translate-paragraph="1">後悔なんて、あるわけない</b></p>
                 </h3>
               </div>
             </div>
           </div>
         </div>
-        <div class="swiper-slide" data-swiper-slide-index="2" style="width: 1920px; transition-duration: 0ms; opacity: 0; transform: translate3d(-5760px, 0px, 0px);" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-          <div class="image image-overlay image-zoom" style="background-image:url(./kami/assets/images/background-2.jpg)" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></div>
-          <div class="container" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-            <div class="row align-items-end align-items-center vh-100" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-              <div class="col-lg-8 text-white" data-swiper-parallax-x="-100%" style="transition-duration: 0ms; transform: translate3d(100%, 0px, 0px);" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-                <h3 class="mb-2 font-weight-light" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">don't forget</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">always somewhere</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">someone is fighting for you</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">as long as you remember her</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"><b data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">You are not alone.</b></p>
+        <div class="swiper-slide" data-swiper-slide-index="2" style="width: 1920px; transition-duration: 0ms; opacity: 0; transform: translate3d(-5760px, 0px, 0px);" >
+          <div class="image image-overlay image-zoom" style="background-image:url(./kami/assets/images/background-2.jpg)" ></div>
+          <div class="container" >
+            <div class="row align-items-end align-items-center vh-100" >
+              <div class="col-lg-8 text-white" data-swiper-parallax-x="-100%" style="transition-duration: 0ms; transform: translate3d(100%, 0px, 0px);" >
+                <h3 class="mb-2 font-weight-light" >
+                  <p  data-immersive-translate-paragraph="1">don't forget</p>
+                  <p  data-immersive-translate-paragraph="1">always somewhere</p>
+                  <p  data-immersive-translate-paragraph="1">someone is fighting for you</p>
+                  <p  data-immersive-translate-paragraph="1">as long as you remember her</p>
+                  <p ><b  data-immersive-translate-paragraph="1">You are not alone.</b></p>
                 </h3>
                 <a href="https://www.bilibili.com/bangumi/play/ep63481" target="_blank" class="btn btn-sm btn-white btn-action opa-8 b-r-10">PLAY<span class="icon-play"></span></a>
               </div>
             </div>
           </div>
         </div>
-        <div class="swiper-slide" data-swiper-slide-index="3" style="width: 1920px; transition-duration: 0ms; opacity: 0; transform: translate3d(-7680px, 0px, 0px);" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-          <div class="image image-overlay image-zoom" style="background-image:url(./kami/assets/images/background-3.jpg)" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></div>
-          <div class="container" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-            <div class="row align-items-end align-items-center vh-100" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-              <div class="col-lg-8 text-white" data-swiper-parallax-x="-100%" style="transition-duration: 0ms; transform: translate3d(100%, 0px, 0px);" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-                <h4 class="mb-2 font-weight-light" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">夢はこの部屋の中で</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">優しい歌をずっと君に歌っていた</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">何がほんとのことなの</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">一番強く信じられる世界を追いかけて</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"><b data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d" data-immersive-translate-paragraph="1">君の銀の庭へ</b></p>
+        <div class="swiper-slide" data-swiper-slide-index="3" style="width: 1920px; transition-duration: 0ms; opacity: 0; transform: translate3d(-7680px, 0px, 0px);" >
+          <div class="image image-overlay image-zoom" style="background-image:url(./kami/assets/images/background-3.jpg)" ></div>
+          <div class="container" >
+            <div class="row align-items-end align-items-center vh-100" >
+              <div class="col-lg-8 text-white" data-swiper-parallax-x="-100%" style="transition-duration: 0ms; transform: translate3d(100%, 0px, 0px);" >
+                <h4 class="mb-2 font-weight-light" >
+                  <p  data-immersive-translate-paragraph="1">夢はこの部屋の中で</p>
+                  <p  data-immersive-translate-paragraph="1">優しい歌をずっと君に歌っていた</p>
+                  <p  data-immersive-translate-paragraph="1">何がほんとのことなの</p>
+                  <p  data-immersive-translate-paragraph="1">一番強く信じられる世界を追いかけて</p>
+                  <p ><b  data-immersive-translate-paragraph="1">君の銀の庭へ</b></p>
                 </h4>
               </div>
             </div>
           </div>
         </div>
-        <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="4" style="width: 1920px; transition-duration: 0ms; opacity: 0; transform: translate3d(-9600px, 0px, 0px);" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-          <div class="image image-overlay image-zoom" style="background-image:url(./kami/assets/images/background-4.jpg)" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></div>
-          <div class="container" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-            <div class="row align-items-end align-items-center vh-100" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-              <div class="col-lg-8 text-white" data-swiper-parallax-x="-100%" style="transition-duration: 0ms; transform: translate3d(100%, 0px, 0px);" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-                <h4 class="mb-2 font-weight-light" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">如果有人告诉我</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">怀有希望是一件错误的事情</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">我将无论多少次都会出言反驳</p>
-                  <p data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">不管何时我都能这样坚持。</p>
+        <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="4" style="width: 1920px; transition-duration: 0ms; opacity: 0; transform: translate3d(-9600px, 0px, 0px);" >
+          <div class="image image-overlay image-zoom" style="background-image:url(./kami/assets/images/background-4.jpg)" ></div>
+          <div class="container" >
+            <div class="row align-items-end align-items-center vh-100" >
+              <div class="col-lg-8 text-white" data-swiper-parallax-x="-100%" style="transition-duration: 0ms; transform: translate3d(100%, 0px, 0px);" >
+                <h4 class="mb-2 font-weight-light" >
+                  <p >如果有人告诉我</p>
+                  <p >怀有希望是一件错误的事情</p>
+                  <p >我将无论多少次都会出言反驳</p>
+                  <p >不管何时我都能这样坚持。</p>
                 </h4>
               </div>
             </div>
           </div>
         </div>
-      <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 1920px; transition-duration: 0ms; opacity: 0; transform: translate3d(-11520px, 0px, 0px);" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-          <div class="image image-overlay image-zoom" style="background-image:url(./kami/assets/images/background-1.jpg)" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></div>
-          <div class="container" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-            <div class="row align-items-center vh-100" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-              <div class="col-lg-8 text-white" data-swiper-parallax-x="-100%" style="transition-duration: 0ms; transform: translate3d(100%, 0px, 0px);" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-                <h3 class="mt-1 mb-3 font-weight-light ftxt" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-                  <p id="txt1" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">Darkness cannot drive out darkness</p>
-                  <p id="txt2" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">only light can do that</p>
-                  <p id="txt3" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">Hate cannot drive out hate</p>
-                  <p id="txt4" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">only love can do that.</p>
-                  <p id="txt5" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"><b>Your sin , I bear</b></p>
+      <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 1920px; transition-duration: 0ms; opacity: 0; transform: translate3d(-11520px, 0px, 0px);" >
+          <div class="image image-overlay image-zoom" style="background-image:url(./kami/assets/images/background-1.jpg)" ></div>
+          <div class="container" >
+            <div class="row align-items-center vh-100" >
+              <div class="col-lg-8 text-white" data-swiper-parallax-x="-100%" style="transition-duration: 0ms; transform: translate3d(100%, 0px, 0px);" >
+                <h3 class="mt-1 mb-3 font-weight-light ftxt" >
+                  <p id="txt1" >Darkness cannot drive out darkness</p>
+                  <p id="txt2" >only light can do that</p>
+                  <p id="txt3" >Hate cannot drive out hate</p>
+                  <p id="txt4" >only love can do that.</p>
+                  <p id="txt5" ><b>Your sin , I bear</b></p>
                 </h3>
               </div>
             </div>
           </div>
         </div></div>
-      <div class="swiper-footer" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-        <div class="container" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-          <div class="music_progress" style="display: block;" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-            <div class="progress" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="11.29" aria-valuemin="0" aria-valuemax="100" style="width: 11.29%;" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></div>
+      <div class="swiper-footer" >
+        <div class="container" >
+          <div class="music_progress" style="display: block;" >
+            <div class="progress" >
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="11.29" aria-valuemin="0" aria-valuemax="100" style="width: 11.29%;" ></div>
             </div>
           </div>
-          <div class="row thesong" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-            <audio id="audio" src="./kami/assets/file/1.mp3" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></audio>
-            <div class="f-l" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"><i id="music_btn_play" class="icon-pause-circle" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></i></div>
-            <div class="f-l" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"><p id="music_name" data-immersive-translate-paragraph="1">梶浦由記 - Never leave you alone</p><p id="bginfo" data-immersive-translate-paragraph="1">Background by <a href="https://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=48824021" target="_blank">lyiet</a></p></div>
+          <div class="row thesong" >
+            <audio id="audio" src="./kami/assets/file/1.mp3" ></audio>
+            <div class="f-l" ><i id="music_btn_play" class="icon-pause-circle" ></i></div>
+            <div class="f-l" ><p id="music_name" data-immersive-translate-paragraph="1">梶浦由記 - Never leave you alone</p><p id="bginfo" data-immersive-translate-paragraph="1">Background by <a href="https://www.pixiv.net/member_illust.php?mode=medium&amp;illust_id=48824021" target="_blank">lyiet</a></p></div>
           </div>
-          <div class="row align-items-center mb-7" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-            <div class="col-6" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-              <div class="swiper-pagination swiper-pagination-0 swiper-pagination-clickable swiper-pagination-bullets" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" tid="0" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2" tid="1" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3" tid="2" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4" tid="3" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5" tid="4" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></span></div>
+          <div class="row align-items-center mb-7" >
+            <div class="col-6" >
+              <div class="swiper-pagination swiper-pagination-0 swiper-pagination-clickable swiper-pagination-bullets" ><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" tid="0" ></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2" tid="1" ></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3" tid="2" ></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4" tid="3" ></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5" tid="4" ></span></div>
             </div>
-            <div class="col-6" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d">
-              <a class="soul" href="https://kami.im/praed.php" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></a>
+            <div class="col-6" >
+              <a class="soul" href="https://kami.im/praed.php" ></a>
             </div>
           </div>
         </div>
       </div>
-    <span class="swiper-notification" aria-live="assertive" aria-atomic="true" data-immersive-translate-walked="2e72bc0d-83e9-4038-af79-b02bdcf3811d"></span></div>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true" ></span></div>
 
     <script type="text/javascript" async="" src="./kami/analytics.js"></script><script type="text/javascript" async="" src="./kami/js"></script><script src="./kami/assets/js/vendor.min.js"></script>
     <script src="./kami/assets/js/base64.min.js"></script>
@@ -1243,7 +478,7 @@ kbd {
   --form-element-valid-focus-color: rgba(67, 160, 71, 0.125);
   --switch-background-color: hsl(205deg, 16%, 77%);
   --switch-color: var(--primary-inverse);
-  --switch-checked-background-color: var(--primary);
+  
   --range-border-color: hsl(205deg, 18%, 86%);
   --range-active-border-color: hsl(205deg, 16%, 77%);
   --range-thumb-border-color: var(--background-color);
@@ -1352,7 +587,7 @@ kbd {
     --form-element-valid-focus-color: rgba(56, 142, 60, 0.25);
     --switch-background-color: #374956;
     --switch-color: var(--primary-inverse);
-    --switch-checked-background-color: var(--primary);
+    
     --range-border-color: #24333e;
     --range-active-border-color: hsl(205deg, 25%, 23%);
     --range-thumb-border-color: var(--background-color);
@@ -1458,7 +693,7 @@ kbd {
   --form-element-valid-focus-color: rgba(56, 142, 60, 0.25);
   --switch-background-color: #374956;
   --switch-color: var(--primary-inverse);
-  --switch-checked-background-color: var(--primary);
+  
   --range-border-color: #24333e;
   --range-active-border-color: hsl(205deg, 25%, 23%);
   --range-thumb-border-color: var(--background-color);
@@ -3956,10 +3191,10 @@ textarea,
 
 #mount#mount {
   /* --primary: rgb(227, 59, 126); */
-  --primary: #ea4c89;
-  --primary-hover: #f082ac;
+  
+  
   --icon-xia: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9IkZyYW1lIj4KPHBhdGggaWQ9IlZlY3RvciIgZD0iTTguMDAyOTEgOS42Nzk4M0wzLjgzMzM5IDUuNTEyMjFMMy4wMjUzOSA2LjMxOTgzTDguMDAzMjkgMTEuMjk1MUwxMi45NzYyIDYuMzE5ODNMMTIuMTY3OSA1LjUxMjIxTDguMDAyOTEgOS42Nzk4M1oiIGZpbGw9IiM4MzgzODMiLz4KPC9nPgo8L3N2Zz4K");
-  --switch-checked-background-color: var(--primary);
+  
 }
 
 li.select-link.select-link:hover > ul {
@@ -4120,110 +3355,27 @@ body {
   padding: 16px 20px;
 }
 
-.immersive-translate-popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  touch-action: none;
-}
 
-.immersive-translate-popup-wrapper {
-  background: var(--background-color);
-  border-radius: 10px;
-  border: 1px solid var(--muted-border-color);
-}
 
-#mount#mount {
-  --font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
-    "Cantarell", "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-  --line-height: 1.5;
-  --font-weight: 400;
-  --font-size: 16px;
-  --border-radius: 4px;
-  --border-width: 1px;
-  --outline-width: 3px;
-  --spacing: 16px;
-  --typography-spacing-vertical: 24px;
-  --block-spacing-vertical: calc(var(--spacing) * 2);
-  --block-spacing-horizontal: var(--spacing);
-  --grid-spacing-vertical: 0;
-  --grid-spacing-horizontal: var(--spacing);
-  --form-element-spacing-vertical: 12px;
-  --form-element-spacing-horizontal: 16px;
-  --nav-element-spacing-vertical: 16px;
-  --nav-element-spacing-horizontal: 8px;
-  --nav-link-spacing-vertical: 8px;
-  --nav-link-spacing-horizontal: 8px;
-  --form-label-font-weight: var(--font-weight);
-  --transition: 0.2s ease-in-out;
-  --modal-overlay-backdrop-filter: blur(4px);
-}
 
-[data-theme="light"],
-#mount:not([data-theme="dark"]) {
-  --popup-footer-background-color: #e8eaeb;
-  --popup-content-background-color: #ffffff;
-  --popup-item-background-color: #f3f5f6;
-  --popup-item-hover-background-color: #eaeced;
-  --text-black-2: #222222;
-  --text-gray-2: #222222;
-  --text-gray-6: #666666;
-  --text-gray-9: #999999;
-  --text-gray-c2: #c2c2c2;
-}
 
-@media only screen and (prefers-color-scheme: dark) {
-  #mount:not([data-theme="light"]) {
-    --popup-footer-background-color: #0d0d0d;
-    --popup-content-background-color: #191919;
-    --popup-item-background-color: #272727;
-    --popup-item-hover-background-color: #333333;
-    --text-black-2: #ffffff;
-    --text-gray-2: #dbdbdb;
-    --text-gray-6: #b3b3b3;
-    --text-gray-9: #777777;
-    --text-gray-c2: #5b5b5b;
-  }
-}
 
-[data-theme="dark"] {
-  --popup-footer-background-color: #0d0d0d;
-  --popup-content-background-color: #191919;
-  --popup-item-background-color: #272727;
-  --popup-item-hover-background-color: #333333;
-  --text-black-2: #ffffff;
-  --text-gray-2: #dbdbdb;
-  --text-gray-6: #b3b3b3;
-  --text-gray-9: #777777;
-  --text-gray-c2: #5b5b5b;
-}
 
-.text-balck {
-  color: var(--text-black-2);
-}
 
-.text-gray-2 {
-  color: var(--text-gray-2);
-}
 
-.text-gray-6 {
-  color: var(--text-gray-6);
-}
 
-.text-gray-9 {
-  color: var(--text-gray-9);
-}
 
-.text-gray-c2 {
-  color: var(--text-gray-c2);
-}
 
-#mount {
-  min-width: 268px;
-}
+
+
+
+
+
+
+
+
+
+
 
 .main-button {
   font-size: 15px;
@@ -4730,9 +3882,7 @@ select.language-select {
   bottom: 0;
 }
 
-select.text-gray-6 {
-  color: var(--text-gray-6);
-}
+select
 
 .language-select-container label {
   position: absolute;
@@ -4842,16 +3992,6 @@ select.text-gray-6 {
 html {
   font-size: 17px;
 }
-
-#mount#mount {
-  position: absolute;
-  display: none;
-  min-width: 250px;
-  height: auto;
-  --font-size: 17px;
-  font-size: 17px;
-}
-
 
 /* float-ball */
 .immersive-translate-float-ball-container {
@@ -5098,26 +4238,3 @@ html {
   overflow: hidden;
 }
 
-.immersive-translate-sheet.visible {
-  transform: translateY(0);
-}
-
-.immersive-translate-sheet-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.3s ease-out;
-}
-
-.immersive-translate-sheet-backdrop.visible {
-  opacity: 1;
-}
-
-.popup-container-sheet {
-  max-width: 100vw;
-  width: 100vw;
-}</style><div id="mount" style="display: block;"><div class="immersive-translate-float-ball-container right notranslate" style="z-index: 2147483647; top: 335px; display: flex;"><div title="关闭悬浮球" class="btn-animate" style="transform: translateX(100%); padding: 4px;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_2589_9951)"><path d="M7 14C5.14348 14 3.36301 13.2625 2.05025 11.9497C0.737498 10.637 0 8.85652 0 7C0 5.14348 0.737498 3.36301 2.05025 2.05025C3.36301 0.737498 5.14348 0 7 0C8.85652 0 10.637 0.737498 11.9497 2.05025C13.2625 3.36301 14 5.14348 14 7C14 8.85652 13.2625 10.637 11.9497 11.9497C10.637 13.2625 8.85652 14 7 14ZM4.183 5.064L6.118 7L4.183 8.936C4.12409 8.99361 4.07719 9.06234 4.04502 9.1382C4.01285 9.21406 3.99605 9.29554 3.99559 9.37794C3.99513 9.46034 4.01101 9.54201 4.04234 9.61823C4.07366 9.69444 4.11978 9.76369 4.17805 9.82195C4.23631 9.88022 4.30556 9.92634 4.38177 9.95766C4.45799 9.98898 4.53966 10.0049 4.62206 10.0044C4.70446 10.004 4.78594 9.98715 4.8618 9.95498C4.93766 9.92281 5.00639 9.87591 5.064 9.817L7 7.882L8.936 9.817C9.05327 9.93168 9.21104 9.99548 9.37506 9.99457C9.53908 9.99365 9.69612 9.92809 9.8121 9.8121C9.92809 9.69612 9.99365 9.53908 9.99457 9.37506C9.99548 9.21104 9.93168 9.05327 9.817 8.936L7.882 7L9.817 5.064C9.87591 5.00639 9.92281 4.93766 9.95498 4.8618C9.98715 4.78594 10.004 4.70446 10.0044 4.62206C10.0049 4.53966 9.98898 4.45799 9.95766 4.38177C9.92634 4.30556 9.88022 4.23631 9.82195 4.17805C9.76369 4.11978 9.69444 4.07366 9.61823 4.04234C9.54201 4.01101 9.46034 3.99513 9.37794 3.99559C9.29554 3.99605 9.21406 4.01285 9.1382 4.04502C9.06234 4.07719 8.99361 4.12409 8.936 4.183L7 6.118L5.064 4.183C4.94673 4.06832 4.78896 4.00452 4.62494 4.00543C4.46092 4.00635 4.30388 4.07191 4.1879 4.1879C4.07191 4.30388 4.00635 4.46092 4.00543 4.62494C4.00452 4.78896 4.06832 4.94673 4.183 5.064Z" fill="#B1B1B1" fill-opacity="0.32"></path></g><defs><clippath id="clip0_2589_9951"><rect width="14" height="14" fill="white"></rect></clippath></defs></svg></div><div style="position: relative; display: inline-block;"><div><div class="immersive-translate-float-ball-btn  right btn-animate " style="transform: translateX(20px); opacity: 0.5;"><div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="immersive-translate-float-ball-logo-img"><path fill="none" d="M0 0h24v24H0z"></path><path d="M5 15v2a2 2 0 0 0 1.85 1.995L7 19h3v2H7a4 4 0 0 1-4-4v-2h2zm13-5l4.4 11h-2.155l-1.201-3h-4.09l-1.199 3h-2.154L16 10h2zm-1 2.885L15.753 16h2.492L17 12.885zM8 2v2h4v7H8v3H6v-3H2V4h4V2h2zm9 1a4 4 0 0 1 4 4v2h-2V7a2 2 0 0 0-2-2h-3V3h3zM6 6H4v3h2V6zm4 0H8v3h2V6z" fill="rgba(255,255,255,1)"></path></svg></div></div></div></div><div class="btn-animate" style="position: relative; display: inline-block; margin-top: 12px; transform: translateX(60px);"><div><div class="immersive-translate-float-ball-setting-btn"><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_d_2589_9922)"><circle cx="22" cy="16" r="14" fill="url(#paint0_linear_2589_9922)" fill-opacity="0.22" shape-rendering="crispEdges"></circle><circle cx="22" cy="16" r="13.5" stroke="url(#paint1_linear_2589_9922)" shape-rendering="crispEdges"></circle></g><circle cx="26.5" cy="11.5" r="1.9" stroke="#999999" stroke-width="1.2"></circle><circle cx="16.5" cy="17.5" r="1.9" stroke="#999999" stroke-width="1.2"></circle><circle cx="25.5" cy="21.5" r="1.9" stroke="#999999" stroke-width="1.2"></circle><rect x="18.0306" y="15.6455" width="7.34958" height="1.2" transform="rotate(-28.9609 18.0306 15.6455)" fill="#999999"></rect><rect x="18.4272" y="18.1299" width="5.62763" height="1.2" transform="rotate(22.5972 18.4272 18.1299)" fill="#999999"></rect><defs><filter id="filter0_d_2589_9922" x="0" y="0" width="44" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feflood flood-opacity="0" result="BackgroundImageFix"></feflood><fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix><feoffset dy="6"></feoffset><fegaussianblur stdDeviation="4"></fegaussianblur><fecomposite in2="hardAlpha" operator="out"></fecomposite><fecolormatrix type="matrix" values="0 0 0 0 0.054902 0 0 0 0 0.0705882 0 0 0 0 0.0862745 0 0 0 0.08 0"></fecolormatrix><feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2589_9922"></feblend><feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2589_9922" result="shape"></feblend></filter><lineargradient id="paint0_linear_2589_9922" x1="27.8333" y1="28.8333" x2="15.5833" y2="3.75" gradientUnits="userSpaceOnUse"><stop stop-opacity="0.5"></stop><stop offset="1" stop-color="#999999" stop-opacity="0.44"></stop></lineargradient><lineargradient id="paint1_linear_2589_9922" x1="26.6667" y1="29.4167" x2="16.1667" y2="3.16667" gradientUnits="userSpaceOnUse"><stop stop-color="#ACACAC" stop-opacity="0.1"></stop><stop offset="1" stop-color="#E1E1E1" stop-opacity="0"></stop></lineargradient></defs></svg></div></div></div><div class="btn-animate" style="position: relative; display: inline-block; margin-top: 12px; transform: translateX(60px);"><div><div class="immersive-translate-float-ball-setting-btn"><svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_d_617_7649)"><circle cx="22" cy="16" r="14" fill="url(#paint0_linear_617_7649)" fill-opacity="0.22" shape-rendering="crispEdges"></circle><circle cx="22" cy="16" r="13.5" stroke="url(#paint1_linear_617_7649)" shape-rendering="crispEdges"></circle></g><path d="M22.3617 8.80583C22.59 8.80608 22.8088 8.89695 22.9701 9.05847C23.1315 9.21998 23.2221 9.43893 23.2221 9.66722V10.4732L23.9765 10.758C24.5457 10.9722 25.0758 11.2783 25.5457 11.6642L26.1699 12.1755L26.8689 11.7721L26.8903 11.7594C27.0204 11.6834 27.1684 11.6435 27.319 11.6437C27.4704 11.6439 27.6191 11.6838 27.7503 11.7594C27.8815 11.835 27.9906 11.9436 28.0667 12.0744L28.4332 12.7093C28.5471 12.9071 28.5779 13.1421 28.5189 13.3626C28.4598 13.5831 28.3157 13.7712 28.1182 13.8857L28.0968 13.8983L27.3988 14.3008L27.5281 15.0951C27.6292 15.7012 27.6292 16.3198 27.5281 16.9258L27.3959 17.7231L28.0959 18.1265L28.1104 18.1353C28.3077 18.2497 28.4516 18.4377 28.5106 18.6579C28.5697 18.8782 28.539 19.1129 28.4254 19.3107L28.0813 19.9057C27.9672 20.1033 27.7793 20.2476 27.5589 20.3068C27.3385 20.3661 27.1037 20.3354 26.9059 20.2217L26.8922 20.2129L26.1913 19.8085L25.5661 20.3237C25.0919 20.7154 24.5561 21.0258 23.9804 21.2425L23.226 21.5274V22.3343C23.2259 22.4476 23.2034 22.5597 23.1599 22.6643C23.1163 22.7689 23.0526 22.8639 22.9723 22.9438C22.892 23.0237 22.7968 23.087 22.692 23.1301C22.5872 23.1731 22.475 23.1951 22.3617 23.1947H21.6384C21.4101 23.1945 21.1912 23.1036 21.0299 22.9421C20.8686 22.7806 20.7779 22.5616 20.7779 22.3333V21.5274L20.0235 21.2425C19.4544 21.0283 18.9243 20.7222 18.4543 20.3364L17.8302 19.825L17.1311 20.2285L17.1097 20.2411C16.9797 20.3171 16.8317 20.3571 16.681 20.3568C16.5296 20.3566 16.3809 20.3167 16.2497 20.2412C16.1186 20.1656 16.0095 20.057 15.9333 19.9261L15.5668 19.2912C15.4529 19.0934 15.4221 18.8585 15.4812 18.6379C15.5402 18.4174 15.6843 18.2293 15.8818 18.1149L15.9032 18.1022L16.6013 17.6997L16.472 16.9054C16.3709 16.2994 16.3709 15.6808 16.472 15.0747L16.6042 14.2785L15.9052 13.874L15.8935 13.8614C15.6994 13.7462 15.5582 13.5595 15.5002 13.3414C15.4423 13.1232 15.4721 12.8911 15.5833 12.6947L15.9275 12.0997C16.0033 11.9687 16.1121 11.86 16.2432 11.7844C16.3742 11.7088 16.5229 11.669 16.6742 11.669C16.8248 11.6688 16.9729 11.7087 17.1029 11.7847L17.1165 11.7925L17.8175 12.1969L18.4427 11.6817C18.9169 11.29 19.4527 10.9796 20.0283 10.7629L20.7828 10.478V9.6711C20.7818 9.44298 20.8713 9.22377 21.0316 9.06155C21.192 8.89934 21.4102 8.80737 21.6384 8.80583H22.3617ZM22.3617 7.63916H21.6384C21.1008 7.63942 20.5854 7.85307 20.2053 8.23316C19.8252 8.61326 19.6115 9.12871 19.6113 9.66624C18.9157 9.92823 18.2682 10.3034 17.695 10.7765L17.6814 10.7687C17.2156 10.5 16.6621 10.4273 16.1427 10.5666C15.6232 10.7059 15.1804 11.0458 14.9115 11.5115L14.5683 12.1114C14.2995 12.5771 14.2267 13.1305 14.3658 13.6499C14.5049 14.1693 14.8446 14.6122 15.3102 14.8812L15.3247 14.889C15.2618 15.2578 15.2292 15.6311 15.2275 16.0051C15.2276 16.3709 15.2575 16.736 15.317 17.0969L15.2956 17.1096C15.0649 17.2426 14.8626 17.4198 14.7004 17.631C14.5382 17.8423 14.4192 18.0834 14.3502 18.3406C14.2813 18.5978 14.2636 18.8661 14.2984 19.1302C14.3332 19.3942 14.4196 19.6488 14.5528 19.8794L14.9193 20.5143C15.0528 20.7451 15.2306 20.9472 15.4423 21.1091C15.6541 21.2711 15.8958 21.3896 16.1534 21.458C16.4111 21.5264 16.6798 21.5432 16.944 21.5076C17.2082 21.4719 17.4627 21.3845 17.6931 21.2503L17.7145 21.2376C18.2829 21.7034 18.9236 22.0732 19.6113 22.3324C19.6111 22.5987 19.6635 22.8624 19.7653 23.1085C19.8671 23.3546 20.0164 23.5783 20.2046 23.7667C20.3928 23.9551 20.6163 24.1046 20.8623 24.2066C21.1083 24.3087 21.372 24.3613 21.6384 24.3614H22.3617C22.8992 24.3611 23.4147 24.1475 23.7948 23.7674C24.1749 23.3873 24.3885 22.8718 24.3888 22.3343C25.0843 22.0726 25.7317 21.6978 26.305 21.225L26.3186 21.2328C26.7845 21.5015 27.3379 21.5742 27.8574 21.4349C28.3768 21.2956 28.8196 20.9557 29.0885 20.49L29.4317 19.895C29.7005 19.4293 29.7734 18.8759 29.6343 18.3565C29.4952 17.8371 29.1555 17.3942 28.6899 17.1251L28.6753 17.1174C28.7383 16.7486 28.7708 16.3753 28.7725 16.0012C28.7724 15.6355 28.7425 15.2703 28.6831 14.9094L28.7045 14.8968C28.9352 14.7638 29.1374 14.5866 29.2996 14.3754C29.4618 14.1641 29.5808 13.923 29.6498 13.6658C29.7188 13.4085 29.7364 13.1402 29.7016 12.8762C29.6669 12.6122 29.5804 12.3576 29.4472 12.1269L29.0807 11.4921C28.9477 11.2608 28.7703 11.0581 28.5588 10.8956C28.3472 10.7331 28.1056 10.614 27.8479 10.545C27.5902 10.4761 27.3214 10.4588 27.057 10.494C26.7925 10.5292 26.5377 10.6163 26.307 10.7503L26.2856 10.7629C25.7172 10.2971 25.0764 9.92733 24.3888 9.66819C24.3889 9.40186 24.3366 9.13811 24.2348 8.89201C24.133 8.64591 23.9837 8.42226 23.7955 8.23385C23.6072 8.04544 23.3837 7.89595 23.1377 7.79391C22.8917 7.69187 22.628 7.63929 22.3617 7.63916Z" fill="#999999"></path><path d="M22 14.0558C22.3846 14.0558 22.7605 14.1699 23.0803 14.3835C23.4001 14.5972 23.6493 14.9009 23.7965 15.2562C23.9436 15.6115 23.9821 16.0024 23.9071 16.3796C23.8321 16.7568 23.6469 17.1033 23.375 17.3752C23.103 17.6471 22.7566 17.8323 22.3794 17.9074C22.0022 17.9824 21.6112 17.9439 21.2559 17.7967C20.9006 17.6495 20.5969 17.4003 20.3833 17.0805C20.1696 16.7608 20.0556 16.3848 20.0556 16.0003C20.0556 15.4846 20.2604 14.99 20.6251 14.6253C20.9898 14.2607 21.4843 14.0558 22 14.0558ZM22 12.8892C21.3847 12.8892 20.7832 13.0716 20.2716 13.4135C19.76 13.7553 19.3612 14.2412 19.1257 14.8097C18.8903 15.3782 18.8287 16.0037 18.9487 16.6072C19.0687 17.2107 19.365 17.7651 19.8001 18.2002C20.2352 18.6353 20.7896 18.9316 21.3931 19.0516C21.9966 19.1716 22.6221 19.11 23.1906 18.8746C23.7591 18.6391 24.245 18.2403 24.5868 17.7287C24.9287 17.2171 25.1111 16.6156 25.1111 16.0003C25.1111 15.1752 24.7834 14.3838 24.1999 13.8004C23.6165 13.2169 22.8251 12.8892 22 12.8892Z" fill="#999999"></path><defs><filter id="filter0_d_617_7649" x="0" y="0" width="44" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feflood flood-opacity="0" result="BackgroundImageFix"></feflood><fecolormatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></fecolormatrix><feoffset dy="6"></feoffset><fegaussianblur stdDeviation="4"></fegaussianblur><fecomposite in2="hardAlpha" operator="out"></fecomposite><fecolormatrix type="matrix" values="0 0 0 0 0.054902 0 0 0 0 0.0705882 0 0 0 0 0.0862745 0 0 0 0.08 0"></fecolormatrix><feblend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_617_7649"></feblend><feblend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_617_7649" result="shape"></feblend></filter><lineargradient id="paint0_linear_617_7649" x1="27.8333" y1="28.8333" x2="15.5833" y2="3.75" gradientUnits="userSpaceOnUse"><stop stop-opacity="0.5"></stop><stop offset="1" stop-color="#999999" stop-opacity="0.44"></stop></lineargradient><lineargradient id="paint1_linear_617_7649" x1="26.6667" y1="29.4167" x2="16.1667" y2="3.16667" gradientUnits="userSpaceOnUse"><stop stop-color="#ACACAC" stop-opacity="0.1"></stop><stop offset="1" stop-color="#E1E1E1" stop-opacity="0"></stop></lineargradient></defs></svg></div></div></div></div></div></template></div></html>
