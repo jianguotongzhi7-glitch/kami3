@@ -3,150 +3,646 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your sin, I bear">
-    <title>God is Madoka - 鹿目圆香 魔法少女まどか☆マギカ</title>
-    <link rel="stylesheet" href="styles.css">
+    <title> 保持理智 's  </title>
+    <meta name="keywords" content="保持理智,保持理智博客,保持理智's,保持理智bolg" />
+    <meta name="Description" content="睡不着的龙波切"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #2c3e50 center/cover no-repeat fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            position: relative;
+            transition: background-image 1s ease;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .avatar:hover {
+            transform: scale(1.05);
+        }
+
+        .avatar-placeholder {
+            font-size: 60px;
+            color: white;
+        }
+
+        .name {
+            color: white;
+            font-size: 28px;
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .quote-box {
+            margin-top: 30px;
+            padding: 25px 40px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 500px;
+        }
+
+        .quote {
+            color: white;
+            font-size: 18px;
+            line-height: 1.8;
+            font-style: italic;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-icons {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .social-item {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .social-icon:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        .qrcode-popup {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .social-item:hover .qrcode-popup {
+            transform: translateX(-50%) scale(1);
+            opacity: 1;
+        }
+
+        .qrcode-box {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .qrcode-box img {
+            width: 200px;
+            height: 200px;
+            display: block;
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        .qrcode-label {
+            color: #333;
+            font-size: 12px;
+            text-align: center;
+            margin-top: 8px;
+            white-space: nowrap;
+        }
+
+        .music-control {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+        }
+
+        .music-btn {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .music-btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .music-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        .music-btn.playing {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: float 15s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+                width: 100%;
+            }
+
+            .avatar {
+                width: 120px;
+                height: 120px;
+            }
+
+            .avatar-placeholder {
+                font-size: 48px;
+            }
+
+            .name {
+                font-size: 22px;
+                margin-top: 15px;
+            }
+
+            .quote-box {
+                margin-top: 20px;
+                padding: 20px 25px;
+                max-width: 90%;
+            }
+
+            .quote {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+
+            .social-icons {
+                margin-top: 30px;
+                gap: 20px;
+            }
+
+            .social-icon {
+                width: 45px;
+                height: 45px;
+            }
+
+            .social-icon svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .qrcode-popup {
+                top: 55px;
+            }
+
+            .qrcode-box {
+                padding: 10px;
+            }
+
+            .qrcode-box img {
+                width: 180px;
+                height: 180px;
+            }
+
+            .qrcode-label {
+                font-size: 11px;
+            }
+
+            .music-control {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .music-btn {
+                width: 45px;
+                height: 45px;
+            }
+
+            .music-btn svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+
+            .avatar {
+                width: 100px;
+                height: 100px;
+                border-width: 3px;
+            }
+
+            .avatar-placeholder {
+                font-size: 40px;
+            }
+
+            .name {
+                font-size: 18px;
+                margin-top: 12px;
+                letter-spacing: 1px;
+            }
+
+            .quote-box {
+                margin-top: 15px;
+                padding: 15px 20px;
+            }
+
+            .quote {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            .social-icons {
+                margin-top: 25px;
+                gap: 15px;
+            }
+
+            .social-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .social-icon svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .qrcode-popup {
+                top: 50px;
+            }
+
+            .qrcode-box {
+                padding: 8px;
+            }
+
+            .qrcode-box img {
+                width: 160px;
+                height: 160px;
+            }
+
+            .qrcode-label {
+                font-size: 10px;
+                margin-top: 5px;
+            }
+
+            .music-control {
+                bottom: 15px;
+                right: 15px;
+            }
+
+            .music-btn {
+                width: 40px;
+                height: 40px;
+            }
+
+            .music-btn svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .particle {
+                width: 3px;
+                height: 3px;
+            }
+        }
+
+        .social-item.active .qrcode-popup {
+            transform: translateX(-50%) scale(1);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* 自动播放提示层 */
+        .play-hint {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+            transition: opacity 0.5s ease;
+        }
+
+        .play-hint.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
-    <!-- Loading -->
-    <div id="loading">
-        <div class="loading-spinner"></div>
+    <div id="playHint" class="play-hint" onclick="startAudio()">
+        点击开启音乐之旅
     </div>
+    <div class="particles" id="particles"></div>
+    
+    <audio id="bgMusic" autoplay preload="auto">
+        <source src="" type="audio/mpeg">
+    </audio>
 
-    <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <div class="logo">
-                <a href="#" class="logo-link">
-                    <div class="logo-circle"></div>
-                </a>
-            </div>
+    <div class="container">
+        <div class="avatar">
+            <img src="img/g" alt="g" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
         </div>
-    </header>
+        <h1 class="name"></h1>
+        
+        <div class="quote-box">
+            <p class="quote" id="quote">加载中...</p>
+        </div>
 
-    <!-- Background Music -->
-    <audio id="bgMusic1">
-        <source src="./music/1.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="bgMusic2">
-        <source src="./music/2.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="bgMusic3">
-        <source src="./music/3.mp3" type="audio/mpeg">
-    </audio>
-
-    <!-- Swiper -->
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-                <div class="slide-bg" style="background-image: url('./images/bg1.jpg')"></div>
-                <div class="slide-content">
-                    <div class="text-container">
-                        <h3>Darkness cannot drive out darkness</h3>
-                        <h3>only light can do that</h3>
-                        <h3>Hate cannot drive out hate</h3>
-                        <h3>only love can do that.</h3>
-                        <p class="quote">Your sin, I bear</p>
-                    </div>
-                    <!-- Music Player -->
-                    <div class="music-player">
-                        <div class="player-container">
-                            <button class="play-btn" data-audio="bgMusic1">
-                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                                <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-                                </svg>
-                            </button>
-                            <div class="progress-container">
-                                <div class="progress-bar">
-                                    <div class="progress-fill"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Navigation -->
-                    <div class="slide-navigation">
-                        <div class="pagination-dots"></div>
-                    </div>
+        <div class="social-icons">
+            <div class="social-item">
+                <div class="social-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.269-.03-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/>
+                    </svg>
                 </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-                <div class="slide-bg" style="background-image: url('./images/bg2.jpg')"></div>
-                <div class="slide-content">
-                    <div class="text-container">
-                        <h3>如果有人告诉我</h3>
-                        <h3>怀有希望是一件错误的事情</h3>
-                        <h3>我将无论多少次都会出言反驳</h3>
-                        <h3>不管何时我都能这样坚持。</h3>
-                        <p class="quote">你的罪孽，我来背负</p>
-                    </div>
-                    <!-- Music Player -->
-                    <div class="music-player">
-                        <div class="player-container">
-                            <button class="play-btn" data-audio="bgMusic2">
-                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                                <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-                                </svg>
-                            </button>
-                            <div class="progress-container">
-                                <div class="progress-bar">
-                                    <div class="progress-fill"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Navigation -->
-                    <div class="slide-navigation">
-                        <div class="pagination-dots"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="swiper-slide">
-                <div class="slide-bg" style="background-image: url('./images/bg3.jpg')"></div>
-                <div class="slide-content">
-                    <div class="text-container">
-                        <h3>无论多少次</h3>
-                        <h3>我都会选择希望</h3>
-                        <h3>无论多么绝望</h3>
-                        <h3>我都相信未来</h3>
-                        <p class="quote">奇迹与魔法，都是存在的</p>
-                    </div>
-                    <!-- Music Player -->
-                    <div class="music-player">
-                        <div class="player-container">
-                            <button class="play-btn" data-audio="bgMusic3">
-                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                                <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
-                                </svg>
-                            </button>
-                            <div class="progress-container">
-                                <div class="progress-bar">
-                                    <div class="progress-fill"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Navigation -->
-                    <div class="slide-navigation">
-                        <div class="pagination-dots"></div>
+                <div class="qrcode-popup">
+                    <div class="qrcode-box">
+                        <img src="img/WeChat.png" alt="微信二维码">
+                        <p class="qrcode-label"></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="script_fixed.js"></script>
+    <div class="music-control">
+        <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
+            <svg id="playIcon" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+            <svg id="pauseIcon" viewBox="0 0 24 24" style="display: none;">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        const fallbackQuotes = [
+            "生活不是等待风暴过去，而是学会在雨中翩翩起舞。",
+            "世界上只有一种真正的英雄主义，那就是认清生活的真相后依然热爱生活。",
+            "不要因为走得太远，而忘记为什么出发。",
+            "人生就像骑自行车，要保持平衡就得不断前进。",
+            "你若盛开，清风自来。"
+        ];
+
+        const backgroundApis = [
+            'https://api.eyabc.cn/api/picture/scenery',
+            'https://api.btstu.cn/sjbz/api.php?lx=fengjing',
+            'https://api.paugram.com/wallpaper/',
+            'https://bing.img.run/rand_uhd.php'
+        ];
+
+        const musicList = [
+            'music/bgm.mp3',
+            'music/bgm2.mp3',
+            'music/bgm3.mp3'
+        ];
+
+        const bgMusic = document.getElementById('bgMusic');
+        const musicBtn = document.getElementById('musicBtn');
+        const playIcon = document.getElementById('playIcon');
+        const pauseIcon = document.getElementById('pauseIcon');
+        let isPlaying = false;
+
+        function setRandomBackground() {
+            const randomIndex = Math.floor(Math.random() * backgroundApis.length);
+            const timestamp = new Date().getTime();
+            const apiUrl = backgroundApis[randomIndex];
+            if (apiUrl.includes('?')) {
+                document.body.style.backgroundImage = `url('${apiUrl}&t=${timestamp}')`;
+            } else {
+                document.body.style.backgroundImage = `url('${apiUrl}?t=${timestamp}')`;
+            }
+        }
+
+        function setRandomMusic() {
+            const randomIndex = Math.floor(Math.random() * musicList.length);
+            bgMusic.src = musicList[randomIndex];
+            bgMusic.load();
+            // 尝试播放
+            bgMusic.play().then(() => {
+                isPlaying = true;
+                playIcon.style.display = 'none';
+                pauseIcon.style.display = 'block';
+                musicBtn.classList.add('playing');
+                document.getElementById('playHint').classList.add('hidden');
+            }).catch(e => {
+                console.log('自动播放需要用户交互');
+                document.getElementById('playHint').classList.remove('hidden');
+            });
+        }
+
+        setRandomBackground();
+        setRandomMusic();
+
+        async function fetchQuote() {
+            const quoteEl = document.getElementById('quote');
+            quoteEl.textContent = '加载中...';
+
+            try {
+                const response = await fetch('https://v1.hitokoto.cn?c=i&c=d&c=k');
+                const data = await response.json();
+                quoteEl.textContent = '"' + data.hitokoto + '"';
+            } catch (error) {
+                console.log('API请求失败，使用备用名言');
+                const fallback = fallbackQuotes[Math.floor(Math.random() * fallbackQuotes.length)];
+                quoteEl.textContent = '"' + fallback + '"';
+            }
+        }
+
+        fetchQuote();
+
+        bgMusic.onended = function() {
+            setRandomMusic();
+            bgMusic.play();
+        };
+
+        function toggleMusic() {
+            if (isPlaying) {
+                bgMusic.pause();
+                playIcon.style.display = 'block';
+                pauseIcon.style.display = 'none';
+                musicBtn.classList.remove('playing');
+            } else {
+                bgMusic.play();
+                playIcon.style.display = 'none';
+                pauseIcon.style.display = 'block';
+                musicBtn.classList.add('playing');
+            }
+            isPlaying = !isPlaying;
+        }
+
+        function startAudio() {
+            if (!isPlaying) {
+                bgMusic.play().then(() => {
+                    isPlaying = true;
+                    playIcon.style.display = 'none';
+                    pauseIcon.style.display = 'block';
+                    musicBtn.classList.add('playing');
+                    document.getElementById('playHint').classList.add('hidden');
+                }).catch(function(error) {
+                    console.log('自动播放被浏览器阻止，请点击播放按钮');
+                    document.getElementById('playHint').classList.remove('hidden');
+                });
+            } else {
+                document.getElementById('playHint').classList.add('hidden');
+            }
+            // 播放后移除监听
+            ['click', 'touchstart', 'mousedown', 'keydown', 'scroll'].forEach(event => {
+                document.removeEventListener(event, startAudio);
+            });
+        }
+
+        ['click', 'touchstart', 'mousedown', 'keydown', 'scroll'].forEach(event => {
+            document.addEventListener(event, startAudio, { once: true });
+        });
+
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = window.innerWidth <= 480 ? 15 : 30;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        const socialItems = document.querySelectorAll('.social-item');
+        socialItems.forEach(item => {
+            item.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                const isActive = this.classList.contains('active');
+                socialItems.forEach(i => i.classList.remove('active'));
+                if (!isActive) {
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        document.addEventListener('touchstart', function(e) {
+            if (!e.target.closest('.social-item')) {
+                socialItems.forEach(item => item.classList.remove('active'));
+            }
+        });
+    </script>
 </body>
 </html>
